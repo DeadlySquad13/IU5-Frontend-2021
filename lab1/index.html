@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<head> 
+    <title>AutoHotkey</title>
+    <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title>
+    <link rel="stylesheet" href=".\style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 
+<header>
+</header>
 <body>
-    lab1
-</body>
+    <div id="starting-page">
+        <div class="header">
+            <img id="logo" src="./Materials/ahk-logo.svg" alt="ahk logo">
+            <div class="form">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <select name="bit-machine">
+                    <option value="none">Choose bit-machine</option>
+                    <option value="64">64 bit</option>
+                    <option value="32">32 bit</option>
+                </select>
+                <button>Enter</button>
+            </div>
+        </div> 
+        <div style="text-align: center; margin-top: 15%;">
+            <h1>AutoHotkey</h1>
+            <span>Powerful. Easy to learn. <br>
+            THe ultimate automation scripting language for Windows.</span>
+        </div>
+    </div>
+      
+    <div class="flex-container">
+        <div class="card">
+            <img src=".\Materials\Key Binds.png" alt="Key">
+            <h2>Key Binds</h2>
+            <p>Define hotkeys for the mouse and keyboard, remap keys or buttons and autocorrect-like replacements. Creating simple hotkeys has never been easier; you can do it in just a few lines or less!</p>
+            <a href=".\"><span class="info-btn">Learn more</span></a>
+        </div>
 
+        <div class="card">
+            <img src=".\Materials\What is AutoHotkey.png" alt="Windows interface">
+            <h2>What is AutoHotkey</h2>
+            <p>AutoHotkey is a free, open-source scripting language for Windows that allows users to easily create small to complex scripts for all kinds of tasks such as: form fillers, auto-clicking, macros, etc.</p>
+            <a href=".\"><span class="info-btn">Learn more</span></a>
+        </div>
+
+        <div class="card">
+            <img src=".\Materials\Is it good for me.png" alt="Thinking man">
+            <h2>Is it good for me?</h2>
+            <p>AutoHotkey has easy to learn built-in commands for beginners. Experienced developers will love this full-fledged scripting language for fast prototyping and small projects.</p>
+            <a href=".\"><span class="info-btn">Learn more</span></a>
+        </div>
+
+        <div class="card">
+            <img src=".\Materials\Why AutoHotkey.png" alt="Desktop tasks">
+            <h2>Why AutoHotkey</h2>
+            <p>AutoHotkey gives you the freedom to automate any desktop task. It's small, fast and runs out-of-the-box. Best of all, it's free, open-source (GNU GPLv2), and beginner-friendly. Why not give it a try?</p>
+            <a href=".\"><span class="info-btn">Learn more</span></a> </div>
+    </div>
+</body>
 </html>

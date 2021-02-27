@@ -1,0 +1,111 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #334455FF;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #FFFFFF;
+}
+
+#starting-page {
+    height: 100%;
+    background: url(Materials/main-page.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header {
+    background-color: rgba(100, 100, 100, 0.0);
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo {
+    height: 60px;
+    margin-top: 10px;
+}
+
+/* .form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30px;
+} */
+
+input, button, select { /* In the future add scripts to hide none element and change color of the selected element.*/
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 2em;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-sizing: content-box;
+}
+
+option {
+    color: rgb(255, 255, 255);
+    background-color: rgba(50, 50, 50);
+}
+
+button, select {
+    color: hsl(0, 0%, 80%);
+}
+
+input::placeholder {
+    color: hsl(0, 0%, 80%);
+}
+/* img {
+    max-height: 100%;
+    object-fit: fill;
+} */
+
+
+h1, h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+    color: #000000;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    padding: 25px;
+    width: 250px;
+}
+
+.card > img {
+    width: 80px;
+}
+
+.card > h2 {
+    margin-top: 3px;
+}
+
+p {
+    text-align: left;
+    color: #9D9D9DFF;
+}
+
+.info-btn {
+    font-weight: bold;
+    padding: 2px 8px;
+    border: 2px solid #000000;
+    font-size: 1.2em;
+    font-family: 'Quicksand', sans-serif;
+}
