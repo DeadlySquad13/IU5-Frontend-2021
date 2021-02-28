@@ -1,21 +1,37 @@
 html, body {
     height: 100%;
+    color: #ffffffec;
+    counter-reset: section;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    background-color: #334455FF;
     font-family: 'Noto Sans JP', sans-serif;
-    color: #FFFFFF;
 }
 
 #starting-page {
     height: 100%;
-    background: url(Materials/main-page.png) no-repeat center center fixed; 
+    background: url(Materials/starting-page.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    to { transform: translateY(0px); }
+
+}
+
+a[href="#main-page"] {
+    color: white;
+}
+
+.floating {
+    animation: float 2s ease-in-out infinite;
 }
 
 .header {
@@ -28,7 +44,7 @@ body {
 
 #logo {
     height: 60px;
-    margin-top: 10px;
+    margin: 5px 0;
 }
 
 /* .form {
@@ -60,11 +76,9 @@ button, select {
 input::placeholder {
     color: hsl(0, 0%, 80%);
 }
-/* img {
-    max-height: 100%;
-    object-fit: fill;
-} */
-
+img {
+    overflow-x: scroll;
+}
 
 h1, h2 {
     text-align: center;
@@ -78,9 +92,16 @@ a {
 .flex-container {
     display: flex;
     justify-content: center;
-    background-color: #FFFFFF;
     color: #000000;
     flex-wrap: wrap;
+}
+
+#card-container {
+    background-color: #FFFFFF; 
+}
+
+#table-container {
+    background-color: #CCBBAAFF;
 }
 
 .card {
@@ -93,13 +114,16 @@ a {
     width: 80px;
 }
 
-.card > h2 {
+h2 {
     margin-top: 3px;
+}
+
+.card > p {
+    color: #9D9D9DFF;
 }
 
 p {
     text-align: left;
-    color: #9D9D9DFF;
 }
 
 .info-btn {
@@ -108,4 +132,67 @@ p {
     border: 2px solid #000000;
     font-size: 1.2em;
     font-family: 'Quicksand', sans-serif;
+}
+
+.info-btn:hover {
+    background-color: rgb(73, 71, 71);
+    color:hsl(0, 0%, 100%);
+    transition: background 0.8s cubic-bezier(.67,.42,.77,.52) 500ms;
+    transition: color 0.3s linear;
+}
+
+#syntax-container {
+    justify-content: space-evenly;
+    background-color: #334455FF; 
+    color: #ffffffec;
+    padding: 10px;
+}
+#syntax-text {
+    width: 550px;
+}
+
+li::marker {
+    content: "- ";
+}
+
+table {
+    margin-left: 30px;   
+}
+
+sup {
+    font-size: 4mm;
+}
+
+th {
+    font-weight: bold;
+    font-size: 1.7em;
+}
+
+td {
+    box-sizing: border-box;
+    padding: 5px 20px;   
+}
+
+td:nth-child(odd) {
+    text-align: center;
+    font-size: 2em;
+}
+
+.icon {
+    border: 1px solid rgb(46, 45, 45);
+    background-color:hsl(0, 0%, 100%)    ;
+    box-shadow: #334455FF 1.5px 1.5px;
+    border-radius: 5px;
+    padding: 1px 3px;
+}
+
+.note {
+   background-color:  rgba(94, 255, 94, 0.363);
+   border-left: 3px solid rgba(0, 121, 0, 0.801);
+   padding: 10px 3px 10px;
+}
+
+.note-text {
+    color: rgb(7, 83, 7);
+    font-size: 110%;
 }
