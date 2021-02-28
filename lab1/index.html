@@ -1,15 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<head> 
+    <title>AutoHotkey</title>
+    <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Document</title>
+    <link rel="icon" href="./Materials/favicon.png">
+    <link rel="stylesheet" href=".\style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 </head>
 
+<header>
+</header>
 <body>
-    lab1
-</body>
+    <div id="starting-page">
+        <div class="header">
+            <img id="logo" src="./Materials/ahk-logo.svg" alt="ahk logo">
+            <div class="form">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <select name="bit-machine">
+                    <option value="none">Choose bit-machine</option>
+                    <option value="64">64 bit</option>
+                    <option value="32">32 bit</option>
+                </select>
+                <button>Enter</button>
+            </div>
+        </div> 
+        <div style="text-align: center; margin-top: 15%;">
+            <h1>AutoHotkey</h1>
+            <span>Powerful. Easy to learn. <br>
+            THe ultimate automation scripting language for Windows.</span>
+        </div>
+        <div class="floating" style="text-align: center; margin-top: 22%;">
+            <a href="#main-page">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+      
+    <div id="card-container" class="flex-container">
+        <a id="main-page"></a>
+        <div class="card">
+            <img src=".\Materials\Key Binds.png" alt="Key">
+            <h2>Key Binds</h2>
+            <p>Define hotkeys for the mouse and keyboard, remap keys or buttons and autocorrect-like replacements. Creating simple hotkeys has never been easier; you can do it in just a few lines or less!</p>
+            <a href="https://www.autohotkey.com/docs/Hotkeys.htm#Intro">
+                <span class="info-btn">Learn more</span>
+            </a>
+        </div>
 
+        <div class="card">
+            <img src=".\Materials\What is AutoHotkey.png" alt="Windows interface">
+            <h2>What is AutoHotkey</h2>
+            <p>AutoHotkey is a free, open-source scripting language for Windows that allows users to easily create small to complex scripts for all kinds of tasks such as: form fillers, auto-clicking, macros, etc.</p>
+            <a href="https://github.com/ahkscript/awesome-AutoHotkey"><span class="info-btn">Learn more</span></a>
+        </div>
+
+        <div class="card">
+            <img src=".\Materials\Is it good for me.png" alt="Thinking man">
+            <h2>Is it good for me?</h2>
+            <p>AutoHotkey has easy to learn built-in commands for beginners. Experienced developers will love this full-fledged scripting language for fast prototyping and small projects.</p>
+            <a href="https://www.autohotkey.com/docs/AutoHotkey.htm"><span class="info-btn">Learn more</span></a>
+        </div>
+
+        <div class="card">
+            <img src=".\Materials\Why AutoHotkey.png" alt="Desktop tasks">
+            <h2>Why AutoHotkey</h2>
+            <p>AutoHotkey gives you the freedom to automate any desktop task. It's small, fast and runs out-of-the-box. Best of all, it's free, open-source (GNU GPLv2), and beginner-friendly. Why not give it a try?</p>
+            <a href="https://en.wikipedia.org/wiki/AutoHotkey"><span class="info-btn">Learn more</span></a> </div>
+    </div>
+    
+    <div id="syntax-container" class="flex-container">
+        <img src="./Materials/A peek at the syntax 1.png" alt="Syntax example">
+        <div id="syntax-text">
+            <h2>A peek at the syntax...</h2>
+            <p>
+                AutoHotkey provides a simple, flexible syntax allowing you to focus more on the task at hand rather than every single little technicality. It supports not only the popular imperative-procedural paradigm, but also object-oriented and command-based programming.
+            </p>
+            <p>
+               Here are a few simple examples: 
+            </p
+            <ul>
+                <li> Hotstrings & Hotkeys </li>
+                <li>Clipboard example</li>
+                <li>Short GUI</li>
+                <li>Simple Array (or Objects)...</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="table-container" class="flex-container">
+        <table>
+            <tr>
+                <th>Symbol<sup>*</sup></th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td>
+                    <span class="icon">Win</span> (Windows logo key).
+                    <p>
+                        [v1.0.48.01+]: For Windows Vista and later, hotkeys that include <span class="icon">Win</span> (e.g. #a) will wait for <span class="icon">Win</span> to be released before sending any text containing an <span class="icon">L</span> keystroke. This prevents usages of Send within such a hotkey from locking the PC. This behavior applies to all sending modes except SendPlay (which doesn't need it) and blind mode. [v1.1.29+]: Text mode is also excluded.
+                    </p>
+                    <div class="note">
+                        <span class="note-text">Note<sub>1</sub>:</span> Pressing a hotkey which includes <span class="icon">Win</span> may result in extra simulated keystrokes (<span class="icon">Ctrl</span> by default). See #MenuMaskKey.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><</td>
+                <td>
+                    <p>
+                        Use the left key of the pair. e.g. <!a is the same as !a except that only the left <span class="icon">Alt</span> will trigger it.
+                    </p>
+                </td>
+            </tr>
+           <tr>
+                <td>!</td>
+                <td>
+                    <p>
+                        <span class="icon">Alt</span>
+                    </p>
+                    <div class="note">
+                        <span class="note-text">Note<sub>2</sub></span>: Pressing a hotkey which includes <span class="icon">Alt</span> may result in extra simulated keystrokes (<span class="icon">Ctrl</span> by default). See #MenuMaskKey.
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>$</td>
+                <td>
+                    <p>
+                        This is usually only necessary if the script uses the Send command to send the keys that comprise the hotkey itself, which might otherwise cause it to trigger itself. The $ prefix forces the keyboard hook to be used to implement this hotkey, which as a side-effect prevents the Send command from triggering it. The $ prefix is equivalent to having specified #UseHook somewhere above the definition of this hotkey.
+                    </p>
+                    <p>
+                        The $ prefix has no effect for mouse hotkeys, since they always use the mouse hook. It also has no effect for hotkeys which already require the keyboard hook, including any keyboard hotkeys with the tilde (~) or wildcard (*) modifiers, key-up hotkeys and custom combinations. To determine whether a particular hotkey uses the keyboard hook, use ListHotkeys.
+                    </p>
+                    <p>
+                        [v1.1.06+]: #InputLevel and SendLevel provide additional control over which hotkeys and hotstrings are triggered by the Send command.
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <div class="note"><span class="note-text">Note<sub>*</sub></span>: See the <a style="color: blue;" href="https://www.autohotkey.com/docs/KeyList.htm">Key List</a> for a complete list of keyboard keys and mouse/joystick buttons.</div>
+    </div>
+</body>
 </html>
