@@ -1,0 +1,67 @@
+// Colors.              
+$color-primary--light: #FFFFFF;
+$color-primary--dark: #181818;
+$color-secondary--light: #5C5C5C;
+$color-secondary--dark: #000000;
+                        
+$color--contrasting: #4452FE;
+                        
+// Sizes.               
+//   Screens.      
+$size-ms: 320px;
+$size-xs: 768px;        
+$size-lg: 1200px;       
+//   Buttons.      
+//     Primary.    
+$size-width__btn--primary: 136px;
+$size-height__btn--primary: 65px;
+//     Secondary.  
+$size-width__btn--secondary: 148px;
+$size-height__btn--secondary: 52px;
+//   Card sizes.
+$size-width__block-contents__card: 476px;
+$size-width__block-testimonials__card--sm: 430px; 
+$size-height-testimonials__card--sm: 344px; 
+$size-margin-top__block-testimonials__card: 23px;
+//   Footer.
+$size-margin-left__footer__contact-info: 114px;
+
+                        
+// Text.                
+//   Font size.         
+$font-size__text-h1--xs: 52px;
+$font-size__text-h1--sm: 80px;
+$font-size__text-h2: 20px;
+$font-size__text--normal: 20px;
+$font-size__text--li: 16px;
+$font-size__text-card: 16px;
+$font-size__text-btn: 17px;
+//   Font weight.           
+$font-weight--normal: 100;    
+$font-weight--bold: 300;      
+$font-weight--bold-fixed: 1000;
+$font-weight--bolder: 400;                                         
+//   Line height.                                                  
+$line-height__text-h1--xs: 62px;                                   
+$line-height__text-h1--sm: 80px;                                   
+$line-height__text-h2: 30px;                                       
+$line-height__text--normal: 30px;                                  
+$line-height__text-li: 24px;                                       
+$line-height__text-card: 24px;                                     
+//   Letter spacing.
+$letter-spacing__text--primary: 0.2px;
+$letter-spacing__text--secondary: 0.1px;
+                                                                   
+@mixin set-flex--horizontal($spacing) {                            
+    display: flex;                                                 
+    flex-direction: row;                                           
+    align-items: center;                                           
+    justify-content: $spacing;                                     
+}                                                                  
+                                                                   
+@mixin set-flex--vertical($spacing) {                              
+    display: flex;                                                 
+    flex-direction: column;
+    align-items: center;   
+    justify-content: $spacing;
+}                          
