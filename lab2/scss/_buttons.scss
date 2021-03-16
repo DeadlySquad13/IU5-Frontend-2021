@@ -1,0 +1,32 @@
+button {
+    display: block;
+}      
+       
+// Sizes.
+@mixin btn-size--primary {
+    width: $size-width__btn--primary;
+    height: $size-height__btn--primary;
+}      
+       
+@mixin btn-size--secondary {
+    width: $size-width__btn--secondary;
+    height: $size-height__btn--secondary;
+}
+
+// Styles.
+%btn-style__text--primary {
+    color: $color-primary--light;
+    font-size: 17px;
+}
+
+@mixin btn-style--simple {
+    @extend %text-btn--primary;
+    border: 1px solid $color-primary--light;
+    background-color: $color-primary--dark;
+}
+
+@mixin btn-style--contrasting {
+    @extend %text-btn--primary;
+    border: none;
+    background-color: $color--contrasting;
+}

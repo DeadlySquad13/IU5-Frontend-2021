@@ -1,0 +1,52 @@
+@mixin text-h1--xs {      
+    font-size: $font-size__text-h1--xs;
+    font-weight: $font-weight--bold;   
+    line-height: $line-height__text-h1--xs;
+    letter-spacing: $letter-spacing__text--primary;
+}                                      
+                                       
+@mixin text-h1--sm {                    
+    font-size: $font-size__text-h1--sm;
+    font-weight: $font-weight--bolder; 
+    line-height: $line-height__text-h1--sm;
+    letter-spacing: $letter-spacing__text--primary;
+}                                      
+                                       
+@mixin text-h2 {                       
+    font-size: $font-size__text-h2;    
+    font-weight: $font-weight--bolder; 
+    line-height: $line-height__text-h2;
+    letter-spacing: $letter-spacing__text--secondary;
+}                                      
+                                       
+@mixin text--normal {          
+    font-size: $font-size__text--normal;
+    line-height: $line-height__text--normal;
+    font-weight: $font-weight--normal;
+}                       
+                        
+@mixin text-li {        
+    font-size: $font-size__text--li;
+    line-height: $line-height__text-li;
+    font-weight: $font-weight--bolder;
+    letter-spacing: $letter-spacing__text--primary;
+}                       
+                        
+@mixin text-card {      
+    font-size: $font-size__text-card;
+    line-height: $line-height__text-card;
+    font-weight: $font-weight--normal;
+    letter-spacing: $letter-spacing__text--primary;
+}
+
+@mixin text-card__h2-fixed { // Unfortunately font-weight isn't the same on whtie and dark colored texts. 
+    font-size: $font-size__text-card;
+    line-height: $line-height__text-card;
+    font-weight: $font-weight--bold-fixed;
+    letter-spacing: $letter-spacing__text--primary;
+}                       
+                       
+%text-btn--primary {
+    color: $color-primary--light;
+    font-size: $font-size__text-btn;
+}
