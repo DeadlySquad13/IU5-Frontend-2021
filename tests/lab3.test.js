@@ -50,8 +50,4 @@ test('prettySum 3', () => {
 
 test('prettySum 4', () => {
     expect(prettySum([-4, -1, 3, 5])).toBe(-5);
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> upstream/master

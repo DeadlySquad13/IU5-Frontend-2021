@@ -26,13 +26,11 @@ function checkBrackets(str) {
         .reduce((acc, el) => {
         (arr[arr.length - 1] === possiblePairs.get(el) && arr[arr.length - 1] != undefined) // Undefined === undefined...
         ? arr.pop()
-        : arr.push(el); 
+        : arr.push(el);
         return arr;
     },
     [])
     .length);
 }
-
-console.log(checkBrackets('[(]())<>'));
 
 module.exports = checkBrackets;
