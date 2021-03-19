@@ -15,7 +15,7 @@ function getAnagramms(arr) {
     const convertedArr = arr.map(str => unify(str));
 
     return convertedArr.reduce((acc, el) => {
-        if (!acc.flat().map(str => unify(str)).includes(unify(el)))
+        if (![].concat(...acc).map(str => unify(str)).includes(unify(el)))
         acc.push(arr.filter(word => unify(word) === el));
         return acc;
     }, []);
