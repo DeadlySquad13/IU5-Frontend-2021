@@ -1,0 +1,77 @@
+@mixin center-text($height-box) {
+    text-align: center;
+    line-height: $height-box;
+}
+// 1st task.
+.square {
+    $size: 300px;
+    height: $size;
+    width: $size;
+
+    @include center-text($size);
+
+    font-size: 20px;
+    user-select: none;
+}
+
+.square--rgb-lightning {
+    background-color: red;
+}
+
+
+// 3rd task.
+.plan-block {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plan-block__btn {
+    width: 100%;
+    $height-btn: 50px;
+    height: $height-btn;
+    @include center-text($height-btn);
+
+    background-color: #24799e;
+
+    color: white;
+}
+
+.plan-block__list {
+    padding-left: 20px;
+}
+
+.plan-block__list--dropDown {
+    display: none;
+}
+
+
+// 4th task.
+$radius-follower: 15px;
+.tag-along-arena {
+    position: relative;
+
+    margin-top: 100px;
+
+    $size: 800px;
+    width: $size;
+    height: $size;
+
+    $thickness-border: 2px;
+    padding: $thickness-border - 1px;
+
+    border: $thickness-border solid black;
+    border-radius: $radius-follower;
+}
+
+.tag-along-arena__follower {
+    position: sticky;
+
+    width: $radius-follower * 2;
+    height: $radius-follower * 2;
+
+    background-color: coral;
+
+    border-radius: $radius-follower;
+}
