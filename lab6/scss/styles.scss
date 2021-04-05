@@ -2,6 +2,13 @@
     text-align: center;
     line-height: $height-box;
 }
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 // 1st task.
 .square {
     $size: 300px;
@@ -59,14 +66,14 @@ $radius-follower: 15px;
     height: $size;
 
     $thickness-border: 2px;
-    padding: $thickness-border - 1px;
+    // padding: $thickness-border - 1px;
 
     border: $thickness-border solid black;
     border-radius: $radius-follower;
 }
 
 .tag-along-arena__follower {
-    position: sticky;
+    position: absolute;
 
     width: $radius-follower * 2;
     height: $radius-follower * 2;
