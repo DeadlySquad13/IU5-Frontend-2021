@@ -19,7 +19,7 @@ const startFollowing = cursor => {
     const minX = leftBorderCoordinates + width;
     const maxX = rightBorderCoordinates - width;
     if (cursor.pageX < minX) {
-        x = 0 - 0.5; // Some strange offsets here...
+        x = 0; // Some strange offsets here...
     } else if (cursor.pageX > maxX) {
         x = arena.offsetWidth - width - 4; // ...and over there.
     } else {
