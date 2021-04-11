@@ -5,11 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Libre+Baskerville:ital@0;1&family=Lobster&family=Poiret+One&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Lobster&display=swap" rel="stylesheet">
     <title>Lab7</title>
 </head>
 
 <body>
-
+    <h1>Weather</h1>
+    <div class="input-section">
+        <input type="text" value="Moscow" placeholder="Enter the city" id="input-city">  <!-- TODO: set default value according to geolocation-->
+        <button class="btn" id="btn-get-city" type="button">Get</button>
+    </div>
+    <div class="weather-info">
+        <div class="weather-info__general">
+            <div class="weather-info__alpha"></div>
+            <div class="weather-info__beta"></div>
+        </div>
+            <ul class="weather-info__list">
+            </ul>
+    </cla>
+    <script src="scripts/weatherFormatting.js"></script>
 </body>
 
 </html>

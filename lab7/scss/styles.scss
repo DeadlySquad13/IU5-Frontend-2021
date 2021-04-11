@@ -1,0 +1,114 @@
+@import "config";
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: url("../resources/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-color: $color-primary-light;
+
+    color: $color-primary-dark;
+
+    font-family: 'Libre Baskerville', serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+
+    width: 270px;
+    margin-bottom: 50px;
+
+    input {
+        width: 200px;
+        height: 40px;
+        background-color: change-color($color-primary-dark, $alpha: 0);
+        border: 0px;
+        border-bottom: 2px solid #9fb7c5;
+        color: $color-primary-dark;
+
+        font-size: 2.4em;
+        font-family: 'Poiret One', cursive;
+
+        transition-duration: 0.8s;
+        transition-timing-function: ease;
+    }
+
+    input::placeholder {
+        color: $color-primary-light-less;
+    }
+
+    input:focus {
+        outline: none;
+
+        color: #fff;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+    }
+
+    button {
+        margin: 20px;
+        width: 50px;
+        height: 30px;
+
+
+        color: $color-primary-dark;
+        background-color: change-color($color-primary-dark, $alpha: 0.2);
+        border: 1px solid $color-primary-dark;
+        border-radius: 2px;
+    }
+
+    button:active {
+
+        border: 1px solid $color-primary-light;
+    }
+}
+.weather-info {
+    width: 270px;
+    background-color: change-color($color-primary-dark, $alpha: 0.9);
+    border: 1px solid $color-primary-dark-less;
+    box-shadow: 12px 7px 4px -3px change-color($color-primary-dark, $alpha: 0.6);
+
+    color: $color-primary-lighter;
+}
+
+.weather-info__general {
+    display: flex;
+
+    .weather-info__alpha {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        min-width: 130px;
+
+        // border-right: 1px solid $color-primary-lighter;
+        h2 {
+            display: block;
+            margin-top: -34px;
+            padding: 0 10px;
+            font-size: 2em;
+            font-family: 'Lobster', cursive;
+            font-weight: 200;
+        }
+    }
+    .weather-info__beta {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+
+        line-height: 3em;
+    }
+
+}
