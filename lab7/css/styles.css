@@ -70,7 +70,7 @@ h1 {
 
 .input-section input:focus {
   outline: none;
-  color: #fff;
+  color: #color-primary-darkest;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   -webkit-transition-timing-function: ease-out;
@@ -81,8 +81,8 @@ h1 {
   margin: 20px;
   width: 50px;
   height: 30px;
-  color: #262626;
-  background-color: rgba(38, 38, 38, 0.2);
+  color: #b3b3b3;
+  background-color: rgba(38, 38, 38, 0.9);
   border: 1px solid #262626;
   border-radius: 2px;
 }
@@ -122,9 +122,10 @@ h1 {
 
 .weather-info__general .weather-info__alpha h2 {
   display: block;
-  margin-top: -34px;
+  margin-top: -28px;
   padding: 0 10px;
-  font-size: 2em;
+  text-align: center;
+  font-size: 1.5em;
   font-family: 'Lobster', cursive;
   font-weight: 200;
 }

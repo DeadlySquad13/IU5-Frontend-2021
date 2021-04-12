@@ -52,7 +52,7 @@ h1 {
     input:focus {
         outline: none;
 
-        color: #fff;
+        color: #color-primary-darkest;
         transition-duration: 1s;
         transition-timing-function: ease-out;
     }
@@ -63,14 +63,13 @@ h1 {
         height: 30px;
 
 
-        color: $color-primary-dark;
-        background-color: change-color($color-primary-dark, $alpha: 0.2);
+        color: $color-primary-lighter;
+        background-color: change-color($color-primary-dark, $alpha: 0.9);
         border: 1px solid $color-primary-dark;
         border-radius: 2px;
     }
 
     button:active {
-
         border: 1px solid $color-primary-light;
     }
 }
@@ -96,9 +95,13 @@ h1 {
         // border-right: 1px solid $color-primary-lighter;
         h2 {
             display: block;
-            margin-top: -34px;
+
+            margin-top: -28px;
             padding: 0 10px;
-            font-size: 2em;
+
+            text-align: center;
+
+            font-size: 1.5em;
             font-family: 'Lobster', cursive;
             font-weight: 200;
         }
