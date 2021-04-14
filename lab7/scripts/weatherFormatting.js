@@ -1,7 +1,15 @@
 const unitsSystem = 'metric';
 const fetchWeather = ((appid, unitsSystem, city) => {
     return city => {
-        return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appid}&units=${unitsSystem}`).then(data =>  data.json());
+        return fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appid}&units=${unitsSystem}`)
+        .then(data =>  data.json())
+        .then(data => {
+            if (data.cod === '404')
+                throw Error(data.message);
+            else
+                return data;
+
+        });
     }
 })('cece76df5bbd26aa6a106ba01efaac56', unitsSystem); // TODO: obfuscation.
 
@@ -65,9 +73,10 @@ function fillInWeather(weather) {
 function getWeather() {
     const city = document.getElementById("input-city").value;
     fetchWeather(city).then(weather  => {
-        console.dir(weather);
+        // console.dir(weather);
         fillInWeather(weather);
     })
+    .catch(() => alert(`${city} not found!`));
 };
 
 // const btn = document.getElementById('btn-get-city');
