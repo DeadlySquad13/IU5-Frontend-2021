@@ -1,0 +1,13 @@
+@use "sass:color";
+$delta: 15%;
+$color-primary-darkest: #000;
+$color-primary-darker: scale-color(#000, $lightness: $delta);
+$color-primary-dark: scale-color(#000, $lightness: $delta);
+$color-primary-dark-less: scale-color(#000, $lightness: 2*$delta);
+
+$color-primary-lightest: #fff;
+$color-primary-lighter: scale-color(#fff, $lightness: -2*$delta);
+$color-primary-light: scale-color(#fff, $lightness: -$delta);
+$color-primary-light-less: scale-color(#fff, $lightness: -2*$delta);
+
+$color-secondary-light: #9fafb3;

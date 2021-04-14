@@ -25,8 +25,10 @@ function fillInWeather(weather) {
     weatherInfoIcon.alt = weather.weather[0].description;
 
     const weatherInfoSecondary = document.createElement('h2');
-    weatherInfoSecondary.appendChild(document.createTextNode(`${weather.weather[0].description}`));
-         // There can be multiple weather descriptions for one area - the first is the primary.
+    weatherInfoSecondary.appendChild(document.createTextNode(`${weather.weather[0].description}`)); // There can be multiple weather descriptions for one area - the first is the primary.
+
+    const weatherInfoCity = document.createElement('h2');
+    weatherInfoCity.appendChild(document.createTextNode(`${weather.name}`));
 
     const weatherInfoPrimary = document.createElement('h3');
     weatherInfoPrimary.appendChild(document.createTextNode(
@@ -34,12 +36,17 @@ function fillInWeather(weather) {
     ));
 
     const alpha = weatherInfoGeneral.children[0];
-    const beta = weatherInfoGeneral.children[1];
+    const beta = weatherInfoGeneral.children[2].children[0];
+    const gamma = weatherInfoGeneral.children[2].children[1];
+
     alpha.textContent = ''; // Removing all children.
     beta.textContent = ''; // Removing all children.
-    alpha.appendChild(weatherInfoIcon);
-    alpha.appendChild(weatherInfoSecondary);
-    beta.appendChild(weatherInfoPrimary);
+    gamma.textContent = ''; // Removing all children.
+
+    alpha.appendChild(weatherInfoCity);
+    beta.appendChild(weatherInfoIcon);
+    beta.appendChild(weatherInfoSecondary);
+    gamma.appendChild(weatherInfoPrimary);
 
     // List will be formed automatically from elements of this array.
     const weatherInfoStrings = [
