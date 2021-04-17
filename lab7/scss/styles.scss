@@ -1,0 +1,138 @@
+@import "config";
+@import "_text";
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: url("../resources/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-color: $color-primary-light;
+
+    color: $color-primary-dark;
+
+    font-family: 'Libre Baskerville', serif;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+
+    width: 270px;
+    margin-bottom: 50px;
+
+    input {
+        width: 200px;
+        height: 40px;
+        background-color: change-color($color-primary-dark, $alpha: 0);
+        border: 0px;
+        border-bottom: 2px solid $color-secondary-light;
+        color: $color-primary-dark;
+
+        @include text-minimalistic;
+
+        transition-duration: 0.8s;
+        transition-timing-function: ease;
+    }
+
+    input::placeholder {
+        color: $color-primary-light-less;
+    }
+
+    input:focus {
+        outline: none;
+
+        color: #color-primary-darkest;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+    }
+
+    .btn {
+        margin: 20px;
+        max-width: 50px;
+        height: 30px;
+
+        color: $color-primary-lightest;
+        background-color: change-color($color-primary-dark, $alpha: 0.9);
+        border: 1px solid $color-primary-dark;
+        border-radius: 2px;
+    }
+
+    .btn:active {
+        border: 1px solid $color-primary-light;
+    }
+}
+
+.weather-info {
+    width: 270px;
+    background-color: $color-background__weather-info;
+    border: 1px solid $color-primary-dark-less;
+    box-shadow: 12px 7px 4px -3px change-color($color-primary-dark, $alpha: 0.6);
+
+    color: $color-primary-lighter;
+}
+
+.weather-info__general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .weather-info__alpha {
+        h2 {
+            @include text-minimalistic;
+            color: $color-secondary-light;
+            margin-bottom: 0px;
+        }
+    }
+
+    .weather-info__important {
+        display: flex;
+    }
+
+    .weather-info__beta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        min-width: 130px;
+
+        // border-right: 1px solid $color-primary-lighter;
+        h2 {
+            display: block;
+
+            margin-top: -28px;
+            padding: 0 10px;
+
+            text-align: center;
+
+            font-size: 1.5em;
+            font-family: 'Lobster', cursive;
+            font-weight: 200;
+        }
+    }
+    .weather-info__gamma {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+
+        line-height: 3em;
+    }
+}
+
+.line-stylish {
+    width: 80%;
+    height: 1px;
+
+    border: 0;
+    background: linear-gradient(to right, $color-background__weather-info 0%, $color-primary-light 70%, $color-background__weather-info 100%);
+}
