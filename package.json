@@ -1,22 +1,35 @@
 {
-    "name": "y",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.html",
-    "dependencies": {
-        "express": "^4.17.1"
-    },
-    "devDependencies": {
-        "jest": "^26.6.3",
-        "nodemon": "^2.0.7"
-    },
-    "scripts": {
-        "test": "nodemon lab5/5.js localhost $PORT",
-        "start": "node server.js",
-        "test-lab-3": "jest lab3.test.js",
-        "test-lab-4": "jest lab4.test.js",
-        "test-lab-5": "jest lab5.test.js"
-    },
-    "author": "",
-    "license": "ISC"
+  "name": "y",
+  "version": "1.0.0",
+  "description": "https://docs.google.com/spreadsheets/d/1tI8__eRI9CBqyhxoyPkDUAurpd6_ZULPNyoh3VOmoTg/edit?usp=sharing",
+  "main": "index.html",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "test": "nodemon lab5/5.js localhost $PORT",
+    "start": "node server.js",
+    "test-lab-3": "jest lab3.test.js",
+    "test-lab-4": "jest lab4.test.js",
+    "test-lab-5": "jest lab5.test.js"
+  },
+  "author": "DeadlySquad13",
+  "license": "ISC",
+  "directories": {
+    "example": "example",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeadlySquad13/IU5-Frontend-2021.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/DeadlySquad13/IU5-Frontend-2021/issues"
+  },
+  "homepage": "https://github.com/DeadlySquad13/IU5-Frontend-2021#readme"
 }
