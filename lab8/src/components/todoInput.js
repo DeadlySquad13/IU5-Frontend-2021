@@ -7,9 +7,14 @@ const TodoInput = () => {
   const initValue = '';
   const [value, setValue] = useState(initValue);
   return (
-    <input type="text" value={value} onChange={(e) => {
-      setValue(e.target.value);
-    }}/>
+    <input
+      type="text"
+      value={value}
+      className="todo-list__todo-input--deleted"
+      onChange={(e) => {
+        setValue(e.target.value);
+      }}
+    />
   );
 }
 

@@ -1,15 +1,22 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
-import TodoItem from './todoItem.js';
+import TodoListContext from './TodoListContext.js';
+import TodoItem from './TodoItem.js';
+import TodoCreateButton from './TodoCreateButton.js';
+
 
 function TodoList() {
-  const [todoItems, setTodoItems] = useState([{initValue: 'vadim'}, {initValue: 'xolodec'}]);
+  const todoListState = useState([{id: 0}]);
+  const [todoItems, setTodoItems] = todoListState;
   return (
-    <div>
-    {todoItems.map((item) => {
-      return <TodoItem />;
-    })}
-    </div>
+    <TodoListContext.Provider value={todoListState}>
+      <TodoCreateButton />
+      <ol>
+        {todoItems.map((item) => {
+          return <TodoItem key={item.id}/>;
+        })}
+      </ol>
+    </TodoListContext.Provider>
   );
 }
 
