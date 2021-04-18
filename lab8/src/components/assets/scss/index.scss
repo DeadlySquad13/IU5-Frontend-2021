@@ -1,5 +1,8 @@
 @import 'config';
 
+.todo-list__todo-input {
+  color: $color-text-todo-input;
+}
 .todo-list__todo-input--deleted {
   text-decoration: line-through;
 }

@@ -10,7 +10,7 @@ const TodoInput = () => {
     <input
       type="text"
       value={value}
-      className="todo-list__todo-input--deleted"
+      className="todo-list__todo-input"
       onChange={(e) => {
         setValue(e.target.value);
       }}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/assets/css/index.css"],"names":[],"mappings":"AAAA,gCACE,4BACF","file":"main.51484908.chunk.css","sourcesContent":[".todo-list__todo-input--deleted {\n  text-decoration: line-through;\n}\n"]}

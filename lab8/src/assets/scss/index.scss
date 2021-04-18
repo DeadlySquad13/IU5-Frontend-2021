@@ -1,3 +1,5 @@
+@import 'config';
 body {
-  background-color: #f8f8f8;
+  background-color: $color-background;
+  color: $color-text;
 }
