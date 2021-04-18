@@ -86,3 +86,6 @@ const weatherInfoList = document.getElementsByClassName('weather-info__list')[0]
 getWeather();
 
 document.getElementById('btn-get-city').addEventListener('click', getWeather);
+
+var one = 1;
+

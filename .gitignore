@@ -5,4 +5,5 @@ node_modules
 .eslintrc.*
 .prettierrc
 .prettierignore
+.prettierrc
 .stylelintrc
