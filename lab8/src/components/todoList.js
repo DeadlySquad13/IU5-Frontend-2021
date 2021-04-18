@@ -13,7 +13,7 @@ function TodoList() {
       <TodoCreateButton />
       <ol>
         {todoItems.map((item) => {
-          return <TodoItem key={item.id}/>;
+          return <TodoItem key={item.id} id={item.id}/>;
         })}
       </ol>
     </TodoListContext.Provider>
