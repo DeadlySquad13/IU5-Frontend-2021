@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
-import TodoListContext from './TodoListContext.js';
-import TodoItem from './TodoItem.js';
-import TodoCreateButton from './TodoCreateButton.js';
+import TodoListContext from './TodoListContext';
+import TodoItem from './TodoItem';
+import TodoCreateButton from './TodoCreateButton';
 
 
 function TodoList() {
@@ -11,11 +11,11 @@ function TodoList() {
   return (
     <TodoListContext.Provider value={todoListState}>
       <TodoCreateButton />
-      <ol>
+      <ul className='TodoList'>
         {todoItems.map((item) => {
           return <TodoItem key={item.id} id={item.id}/>;
         })}
-      </ol>
+      </ul>
     </TodoListContext.Provider>
   );
 }

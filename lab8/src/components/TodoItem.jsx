@@ -1,8 +1,8 @@
 import React from 'react';
 
-import TodoInput from './TodoInput.js';
-import TodoCheckBox from './TodoCheckBox.js';
-import TodoDeleteButton from './TodoDeleteButton.js';
+import TodoInput from './TodoInput';
+import TodoCheckBox from './TodoCheckBox';
+import TodoDeleteButton from './TodoDeleteButton';
 
 const TodoItem = (props) => {
   console.dir(props);

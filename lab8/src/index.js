@@ -1,6 +1,11 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
+import './assets/css/index.css';
+import App from './App';
 
-import TodoList from './components/TodoList.js';
-
-ReactDom.render(<TodoList />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

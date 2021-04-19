@@ -1,5 +1,5 @@
 import React from 'react';
-import TodoListContext from './TodoListContext.js';
+import TodoListContext from './TodoListContext';
 
 const deleteTodoItem = (todoListState, id) => {
   console.log('deleteTodoItem');
