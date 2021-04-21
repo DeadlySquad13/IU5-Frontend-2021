@@ -1,0 +1,3 @@
+.todo-list__todo-input--deleted {
+  text-decoration: line-through;
+}

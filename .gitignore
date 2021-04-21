@@ -3,6 +3,7 @@ node_modules
 .vscode
 */Problem
 .eslintrc.*
+.prettierrc
 .prettierignore
 .prettierrc
 .stylelintrc
