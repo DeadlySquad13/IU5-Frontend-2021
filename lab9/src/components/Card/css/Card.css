@@ -1,0 +1,187 @@
+@use 'sass:color';
+.UserPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Card {
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 230px;
+  color: #f8f8f8;
+  background-color: #7eabee;
+  -webkit-box-shadow: 0px 2px 20px #00000080;
+          box-shadow: 0px 2px 20px #00000080;
+}
+
+.Card__InfoMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.Card__Image {
+  margin-top: 2rem;
+  position: relative;
+  width: 150px;
+}
+
+.Card__Image img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.Card__Image .Image__Circle1, .Card__Image .Image__Circle2 {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 156px;
+  height: 156px;
+  top: -3px;
+  left: -3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #306fcd #306fcd #306fcd transparent;
+  border-radius: 50%;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+
+.Card__Image .Image__Circle2 {
+  width: 162px;
+  height: 162px;
+  top: -6px;
+  left: -6px;
+  border-color: #306fcd transparent #306fcd #306fcd;
+}
+
+.Card__TextH1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #306fcd;
+}
+
+.Card__TextH1::first-letter {
+  font-size: 1.4em;
+  color: #eb604d;
+}
+
+.Card__Delimeter {
+  margin: -0.6rem 0 2rem;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#7eabee), color-stop(55%, #f8f8f8), color-stop(80%, #f8f8f8), to(#7eabee));
+  background: linear-gradient(to right, #7eabee 0%, #f8f8f8 55%, #f8f8f8 80%, #7eabee 100%);
+}
+
+.Card__InfoAdditional {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.Card__InfoAdditional ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.Card__InfoAdditional li {
+  width: 33%;
+  padding: 1em 1em;
+  font-style: italic;
+  background-color: #394d6b;
+}
+
+.Card__InfoAdditional li:nth-child(2) {
+  margin: 0 1px;
+}
+
+.Card__InfoAdditional li p {
+  margin: 0;
+  font-size: 2em;
+  font-style: normal;
+}
+
+.Badge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -0.2em;
+  width: 246px;
+  height: 3rem;
+  background-color: #7eabee;
+  border-radius: 0.2em;
+  -webkit-box-shadow: 0px 6px 20px #00000080;
+          box-shadow: 0px 6px 20px #00000080;
+  line-height: 3.4rem;
+}
+
+.Badge a {
+  display: inline-block;
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+.Link {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #f8f8f8;
+  text-decoration: none;
+  -webkit-transition: font-size .5s ease-in-out;
+  transition: font-size .5s ease-in-out;
+}
+
+.Link:hover {
+  font-size: 2.2rem;
+}

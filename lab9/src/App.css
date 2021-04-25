@@ -28,6 +28,17 @@
   color: #61dafb;
 }
 
+
+.App__text-h1 {
+  margin-top: 0;
+  color: #ffffff50;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -5,6 +5,7 @@ import { selectInput } from '../searchSlice.js';
 import { input } from '../searchSlice.js';
 
 import '../assets/css/index.css';
+import './css/SearchInput.css';
 
 const SearchInput = () => {
   const dispatch = useDispatch();

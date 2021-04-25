@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    [
+      "babel-plugin-relative-path-import",
+      {
+        "paths": [
+          {
+            "rootPathPrefix": "@styles",
+            "rootPathSuffix": "/src/assets/css"
+          }
+        ]
+      }
+    ]
+  ]
+}

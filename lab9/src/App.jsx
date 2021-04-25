@@ -1,5 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  withRouter,
+} from 'react-router-dom';
 
 import SearchForm from './components/SearchForm/SearchForm.jsx';
 import Card from './components/Card/Card.jsx';
@@ -8,26 +14,14 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+      <Router>
       <div className='App'>
-        <h1>Github Profile Searcher</h1>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/search">Expore</Link>
-            </li>
-          </ul>
-        </nav> */}
+        <h1 className='App__text-h1'>Github Profile Searcher</h1>
         <Switch>
-          <Route path='/search'>
-            <SearchForm />
-          </Route>
+          <Route exact path='/' component={SearchForm} />
           <Route path='/user'>
             <Card />
           </Route>
-          {/* <form> */}
-          {/* {path} = useRouteMatch() */}
-          {/* </form> */}
         </Switch>
       </div>
     </Router>

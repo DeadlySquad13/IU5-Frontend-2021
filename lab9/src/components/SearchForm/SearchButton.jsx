@@ -6,7 +6,7 @@ import { selectInput, fetchData } from '../searchSlice';
 import { generateUserUrl } from './utils/generateUrl.js';
 import fetchDataThunk from './handlers/fetchDataThunk.js';
 
-// import './assets/css/SearchButton.css';
+import './css/SearchButton.css';
 
 const SearchButton = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,6 @@ const SearchButton = () => {
     <button
       className='SearchButton'
       onClick={() => {
-        console.log('Search');
         memoizedFetchUser(value);
         history.push('/user');
       }}

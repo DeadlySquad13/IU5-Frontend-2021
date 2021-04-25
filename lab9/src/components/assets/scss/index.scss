@@ -1,8 +1,28 @@
 @import 'config';
+@use 'sass:color';
+$padding-Card__InfoMain: 1rem;
+$c-Card__TextH1: $c-primary--neutral;
+$c-Card__Text--FirstLetter: $c-tertiary;
+$c-Card__TextNormal: $c-primary--contrasting;
+$c-background-Card: $c-secondary--contrasting;
+// $c-background-Badge: adjust-color($c-background-Card, $lightness: -30%);
+$c-background-Card__AdditionalInfo: $c-secondary--neutral;
+$c-background-Badge: $c-background-Card;
+$c-border-Card__Circle1: $c-Card__TextH1;
+$c-border-Card__Circle2: $c-border-Card__Circle1;
+$c-shadow: #00000080;
 
-.todo-list__todo-input {
-  color: $color-text-todo-input;
+$border-radius-Badge: 0.2em;
+$margin-Badge: -$border-radius-Badge;
+
+@mixin shadow--deep {
+  box-shadow: 0px 6px 20px $c-shadow;
 }
-.todo-list__todo-input--deleted {
-  text-decoration: line-through;
+
+@mixin shadow--shallow {
+  box-shadow: 0px 2px 20px $c-shadow;
+}
+
+@function calculatePx($size) {
+ @return $size / 1rem * 16px;
 }
