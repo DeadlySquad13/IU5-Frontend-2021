@@ -3,11 +3,10 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 const fetchDataThunk = createAsyncThunk(
   'search/fetchDataThunk',
   async ({ login, generateUrl }, thunkAPI) => {
-    const TOKEN = process.env.REACT_APP_API_KEY;
     const searchResult = await fetch(generateUrl(login), {
       method: 'GET',
       headers: {
-        Authorization: `Token ${TOKEN}`,
+        Authorization: `Token ${process.env.REACT_APP_API_KEY}`,
       },
     });
 

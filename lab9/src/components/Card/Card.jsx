@@ -71,12 +71,8 @@ const Card = () => {
           Open Github Profile
         </div>
       </div>
-      <Link className='Link' to='/'>
-
-
+      <Link className='Link' to='/lab9/build/'>
         Back
-
-
       </Link>
     </div>
   );
