@@ -14,12 +14,12 @@ import './App.css';
 
 function App() {
   return (
-      <Router>
+    <Router>
       <div className='App'>
         <h1 className='App__text-h1'>Github Profile Searcher</h1>
         <Switch>
-          <Route exact path='/' component={SearchForm} />
-          <Route path='/user'>
+          <Route exact path='/lab9/build/' component={SearchForm} />
+          <Route path='/lab9/build/user'>
             <Card />
           </Route>
         </Switch>

@@ -26,7 +26,7 @@ const SearchButton = () => {
       className='SearchButton'
       onClick={() => {
         memoizedFetchUser(value);
-        history.push('/user');
+        history.push('/lab9/build/user');
       }}
     >
       Search

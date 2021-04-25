@@ -7,12 +7,18 @@ import './css/Card.css';
 const Card = () => {
   const { status, users } = useSelector((state) => state.search);
   if (users.length === 0) {
-    return <Link className='Link' to='/'>Back</Link>;
+    return (
+      <Link className='Link' to='/lab9/build/'>
+        Back
+      </Link>
+    );
   }
   if (status === 'pending') {
     return (
       <>
-        <Link className='Link' to='/'>Back</Link>
+        <Link className='Link' to='/lab9/build/'>
+          Back
+        </Link>
         <div>Loading...</div>
       </>
     );
@@ -20,7 +26,9 @@ const Card = () => {
   if (status === 'rejected') {
     return (
       <>
-        <Link className='Link' to='/'>Back</Link>
+        <Link className='Link' to='/lab9/build/'>
+          Back
+        </Link>
         <div>Not Found</div>
       </>
     );
