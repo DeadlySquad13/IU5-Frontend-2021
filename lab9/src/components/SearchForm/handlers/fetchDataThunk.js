@@ -4,10 +4,7 @@ const fetchDataThunk = createAsyncThunk(
   'search/fetchDataThunk',
   async ({ login, generateUrl }, thunkAPI) => {
     const searchResult = await fetch(generateUrl(login), {
-      method: 'GET',
-      headers: {
-        Authorization: `Token ${process.env.REACT_APP_API_KEY}`,
-      },
+      Authorization: `Token ${process.env.REACT_APP_API_KEY}`,
     });
 
     if (!searchResult.ok) {
