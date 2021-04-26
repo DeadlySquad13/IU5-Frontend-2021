@@ -19,14 +19,12 @@ export const slice = createSlice({
   },
   extraReducers: {
     [fetchDataThunk.pending]: (state, action) => {
-      if (state.status === 'idle') {
-        state.status = 'pending';
-        state.currentRequestId = action.meta.requestId;
-      }
+      state.status = 'pending';
+      state.currentRequestId = action.meta.requestId;
     },
     [fetchDataThunk.fulfilled]: (state, action) => {
       const { requestId } = action.meta;
-      if (state.status === 'pending' && state.currentRequestId === requestId) {
+      if (state.currentRequestId === requestId) {
         state.status = 'idle';
         state.users = [action.payload];
         state.currentRequestId = undefined;
@@ -34,7 +32,7 @@ export const slice = createSlice({
     },
     [fetchDataThunk.rejected]: (state, action) => {
       const { requestId } = action.meta;
-      if (state.status === 'pending' && state.currentRequestId === requestId) {
+      if (state.currentRequestId === requestId) {
         state.status = 'rejected';
         state.error = action.error;
         state.currentRequestId = undefined;
