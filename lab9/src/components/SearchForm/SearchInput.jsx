@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { selectInput } from '../searchSlice.js';
@@ -18,7 +18,6 @@ const SearchInput = () => {
       className='Input'
       onChange={(e) => {
         dispatch(input(e.target.value));
-        // setLogin(e.target.value);
       }}
     />
   );

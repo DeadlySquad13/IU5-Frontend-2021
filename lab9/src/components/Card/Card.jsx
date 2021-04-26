@@ -46,7 +46,6 @@ const Card = () => {
             </div>
             <h1 className='Card__TextH1'>{user.login}</h1>
           </div>
-          {/* <div className="Card__Delimeter"></div> */}
           <div className='Card__InfoAdditional'>
             <ul>
               <li>
@@ -65,7 +64,7 @@ const Card = () => {
           </div>
         </div>
         <div className='Badge'>
-          <a href={user.html_url} target='_blank'>
+          <a href={user.html_url}>
             <img src='GitHub-Mark.png' alt='GitHub' />
           </a>
           Open Github Profile
