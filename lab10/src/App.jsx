@@ -12,7 +12,7 @@ function App() {
       <div className='App'>
         <h1 className='App__text-h1'>Github Profile Searcher</h1>
         <Switch>
-          <Route path='/index.html' component={SearchForm} />
+          <Route exact path='/' component={SearchForm} />
           <Route path='/user/'>
             <Card />
           </Route>

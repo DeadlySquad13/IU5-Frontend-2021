@@ -9,7 +9,7 @@ const Card = () => {
   const { status, users } = useSelector((state) => state.search);
   if (users.length === 0) {
     return (
-      <Link className='Link' to='/index.html'>
+      <Link className='Link' to='/'>
         Back
       </Link>
     );
@@ -17,7 +17,7 @@ const Card = () => {
   if (status === 'pending') {
     return (
       <>
-        <Link className='Link' to='/index.html'>
+        <Link className='Link' to='/'>
           Back
         </Link>
         <div>Loading...</div>
@@ -27,7 +27,7 @@ const Card = () => {
   if (status === 'rejected') {
     return (
       <>
-        <Link className='Link' to='/index.html'>
+        <Link className='Link' to='/'>
           Back
         </Link>
         <div>Not Found</div>
@@ -71,7 +71,7 @@ const Card = () => {
           Open Github Profile
         </div>
       </div>
-      <Link className='Link' to='/index.html'>
+      <Link className='Link' to='/'>
         Back
       </Link>
     </div>

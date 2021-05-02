@@ -1,8 +1,10 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { selectInput } from '../searchSlice.js';
 import { input } from '../searchSlice.js';
+
 
 import '../assets/_css/index.css';
 import './assets-SearchForm/_css/SearchForm__Input.css';
@@ -23,4 +25,4 @@ const SearchInput = () => {
   );
 };
 
-export default SearchInput;
+export default withRouter(SearchInput);

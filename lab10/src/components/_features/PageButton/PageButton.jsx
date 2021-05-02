@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { increment } from './counterSlice.js';
 
-const NextPageButton = () => {
+const PageButton = () => {
   const dispatch = useDispatch();
   return (
     <button
@@ -15,4 +15,4 @@ const NextPageButton = () => {
   );
 };
 
-export default NextPageButton;
+export default PageButton;
