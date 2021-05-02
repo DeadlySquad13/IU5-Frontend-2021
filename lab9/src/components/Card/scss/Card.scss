@@ -1,0 +1,153 @@
+@import '../../assets/scss/index';
+
+.UserPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+$width-Card: 230px;
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Card {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: $width-Card;
+
+  color: $c-Card__TextNormal;
+  background-color: $c-background-Card;
+  @include shadow--shallow;
+
+  &__InfoMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $padding-Card__InfoMain;
+  }
+
+  &__Image {
+    $width-img: 150px;
+    margin-top: 2rem;
+    position: relative;
+    width: $width-img;
+
+    img {
+      width: $width-img;
+      border-radius: 50%;
+    }
+
+    .Image__Circle1 {
+      position: absolute;
+      box-sizing: border-box;
+      width: $width-img + 6px;
+      height: $width-img + 6px;
+      top: -3px;
+      left: -3px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $c-border-Card__Circle1 $c-border-Card__Circle1 $c-border-Card__Circle1 transparent;
+      border-radius: 50%;
+      transition: all 1.5s ease-in-out;
+    }
+
+    .Image__Circle2 {
+      @extend .Image__Circle1;
+      width: $width-img + 12px;
+      height: $width-img + 12px;
+      top: -6px;
+      left: -6px;
+      border-color: $c-border-Card__Circle2 transparent $c-border-Card__Circle2 $c-border-Card__Circle2;
+    }
+  }
+
+  &__TextH1 {
+    margin: 0;
+    font-size: 2rem;
+    color: $c-Card__TextH1;
+
+    &::first-letter {
+      font-size: 1.4em;
+      color: $c-Card__Text--FirstLetter;
+    }
+  }
+
+  &__Delimeter {
+      margin: -0.6rem 0 2rem;
+      width: 100%;
+      height: 1px;
+
+      border: 0;
+      background: linear-gradient(to right, $c-background-Card 0%, $c-Card__TextNormal 55%, $c-Card__TextNormal 80%, $c-background-Card 100%);
+  }
+
+  &__InfoAdditional {
+    text-align: center;
+
+    font-size: 0.8rem;
+  }
+
+  &__InfoAdditional ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__InfoAdditional li {
+    width: 33%;
+    padding: 1em 1em;
+    font-style: italic;
+    background-color: $c-background-Card__AdditionalInfo;
+
+    &:nth-child(2) {
+      margin: 0 1px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 2em;
+      font-style: normal;
+    }
+  }
+}
+
+.Badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: $margin-Badge;
+  width: $width-Card - calculatePx($padding-Card__InfoMain);
+  height: 3rem;
+  background-color: $c-background-Badge;
+  border-radius: $border-radius-Badge;
+
+  @include shadow--deep;
+
+  line-height: 3.4rem;
+
+  a {
+    display: inline-block;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.Link {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: $c-Card__TextNormal;
+  text-decoration: none;
+  transition: font-size .5s ease-in-out;
+}
+
+.Link:hover {
+  font-size: 2.2rem;
+}
