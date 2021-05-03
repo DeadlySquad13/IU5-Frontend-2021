@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 let headers = new Headers();
 
-type fetchRequestData = Readonly<{
+type fetchRequestCredentials = Readonly<{
   login: string,
   generateUrl: (login: string) => string
 }>
@@ -14,7 +14,7 @@ const fetchRequestInitParameters: RequestInit = {
 
 const fetchDataThunk = createAsyncThunk(
   'search/fetchDataThunk',
-  async ({ login, generateUrl }: fetchRequestData, thunkAPI) => {
+  async ({ login, generateUrl }: fetchRequestCredentials, thunkAPI) => {
     const searchResult = await fetch(generateUrl(login),
     fetchRequestInitParameters);
 
