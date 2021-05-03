@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import fetchDataThunk from './SearchForm/_handlers/fetchDataThunk.js';
+import fetchDataThunk from './SearchForm/_handlers/fetchDataThunk.ts';
 
 const AUTHOR = 'DeadlySquad13';
 export const slice = createSlice({

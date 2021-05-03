@@ -9,6 +9,7 @@ import './App.css';
 function App() {
   return (
     <Router basename='/lab10/build/'>
+      {/* <Router> */}
       <div className='App'>
         <h1 className='App__text-h1'>Github Profile Searcher</h1>
         <Switch>
