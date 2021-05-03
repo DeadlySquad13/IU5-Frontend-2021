@@ -2,8 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { selectInput } from '../searchSlice.js';
-import { input } from '../searchSlice.js';
+import { selectInput } from '../searchSlice';
+import { input } from '../searchSlice';
 
 
 import '../assets/_css/index.css';

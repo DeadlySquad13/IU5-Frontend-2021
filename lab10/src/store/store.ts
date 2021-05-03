@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from '../components/_features/PageButton/counterSlice.js';
-import searchReducer from '../components/searchSlice.js';
+import searchReducer from '../components/searchSlice';
 
-export default configureStore({
+export const store = configureStore({
   reducer: {
     counter: counterReducer,
     search: searchReducer,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
