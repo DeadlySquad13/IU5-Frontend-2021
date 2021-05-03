@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { increment } from './counterSlice.js';
+import { increment } from './counterSlice';
 
 const NextPageButton = () => {
   const dispatch = useDispatch();

@@ -4,9 +4,10 @@ import { Link, withRouter } from 'react-router-dom';
 
 import GitHub__Logo from './assets-Card/_resources/_images/GitHub-Mark.png';
 import './assets-Card/_css/Card.css';
+import { RootState } from '../../store/store';
 
 const Card = () => {
-  const { status, users } = useSelector((state) => state.search);
+  const { status, users } = useSelector((state: RootState) => state.search);
   if (users.length === 0) {
     return (
       <Link className='Link' to='/'>

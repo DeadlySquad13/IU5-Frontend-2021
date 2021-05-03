@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../components/_features/PageButton/counterSlice.js';
+import counterReducer from '../components/_features/PageButton/counterSlice';
 import searchReducer from '../components/searchSlice';
 
 export const store = configureStore({

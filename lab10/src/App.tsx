@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import SearchForm from './components/SearchForm/SearchForm.jsx';
-import Card from './components/Card/Card.jsx';
+import SearchForm from './components/SearchForm/SearchForm';
+import Card from './components/Card/Card';
 
 import './App.css';
 

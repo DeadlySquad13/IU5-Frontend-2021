@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { selectInput } from '../searchSlice';
 
-import { generateUserUrl } from './_utilities/generateUrl.ts';
-import fetchDataThunk from './_handlers/fetchDataThunk.ts';
+import { generateUserUrl } from './_utilities/generateUrl';
+import fetchDataThunk from './_handlers/fetchDataThunk';
 
 import './assets-SearchForm/_css/SearchForm__Button.css';
 
