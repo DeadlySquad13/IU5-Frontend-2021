@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import SearchInput from './SearchForm__Input.jsx';
-import SearchButton from './SearchForm__Button.jsx';
+import SearchInput from './SearchForm__Input';
+import SearchButton from './SearchForm__Button';
 
 import './assets-SearchForm/_css/SearchForm.css';
 

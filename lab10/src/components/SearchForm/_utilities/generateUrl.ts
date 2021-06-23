@@ -1,4 +1,4 @@
-const generateSearchUrl = (login) => {
+const generateSearchUrl = (login: string):string => {
   return (
     'https://api.github.com/search/users?q=' +
     encodeURIComponent(`${login} in:login`)
@@ -7,5 +7,5 @@ const generateSearchUrl = (login) => {
 
 export { generateSearchUrl };
 
-export const generateUserUrl = (login) =>
+export const generateUserUrl = (login:string):string =>
   `https://api.github.com/users/${login}`;

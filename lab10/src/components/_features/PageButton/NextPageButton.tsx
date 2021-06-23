@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { increment } from './counterSlice.js';
+import { increment } from './counterSlice';
 
-const PageButton = () => {
+const NextPageButton = () => {
   const dispatch = useDispatch();
   return (
     <button
@@ -15,4 +15,4 @@ const PageButton = () => {
   );
 };
 
-export default PageButton;
+export default NextPageButton;
